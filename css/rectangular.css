@@ -1,0 +1,8 @@
+.rect{
+    display: inline-flex;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}

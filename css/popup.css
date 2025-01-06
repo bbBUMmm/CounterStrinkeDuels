@@ -1,0 +1,89 @@
+.popup-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+    transition: 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 0.4s ease;
+}
+
+.popup-container .popup-box {
+    width: 550px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transform: scale(0);
+}
+
+.popup-container.active .popup-box {
+    transform: scale(1);
+    transition: 0.4s ease;
+    transition-delay: 0.25s;
+}
+
+.popup-box h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #333;
+    line-height: 1;
+}
+
+.popup-box p {
+    color: #333;
+    margin: 12px 0 20px;
+}
+
+.popup-box .close-btn{
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.popup-box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.popup-box ol {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: item-counter;
+}
+
+.popup-box ol li {
+    font-size: 1.05rem;
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 20px;
+    line-height: 1.6;
+    position: relative;
+    color: black;
+}
+
+.popup-box ol li:before {
+    content: counter(item-counter) ".";
+    counter-increment: item-counter;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: rgb(255, 204, 0);
+}

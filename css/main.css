@@ -1,0 +1,58 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: oblique;
+    color: #333;
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+
+}
+
+main {
+    position: relative;
+    z-index: 2;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.arrowsHelp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.svg-container svg {
+    width: 65px;
+    height: 65px;
+    transform: rotate(90deg);
+}
+

@@ -1,0 +1,27 @@
+
+.help svg {
+    border-radius: 18px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff7b00;
+    box-shadow: 0 0 10px #ff7b00;
+
+    animation-name: breath;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    cursor: pointer;
+}
+
+@keyframes breath {
+    10%{
+        background-color: #ff7b00;
+    }
+    50%{
+        background-color: rgb(255, 204, 0);
+    }
+    100%{
+        background-color: #ff7b00;
+    }
+}
