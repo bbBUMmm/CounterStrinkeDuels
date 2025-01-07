@@ -32,11 +32,16 @@ main {
     z-index: 2;
 }
 
-img {
+.background img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     opacity: 0.8;
+}
+
+#firstItem {
+    height: 100%;
+    width: 100%;
 }
 
 .wrapper {
