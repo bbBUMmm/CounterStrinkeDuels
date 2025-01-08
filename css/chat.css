@@ -51,7 +51,7 @@
 }
 
 .chat-header {
-    background: linear-gradient(135deg, #ff7f11, #ff9f47);
+    background: linear-gradient(135deg, #222222, #2e2e2e);
     color: #fff;
     padding: 15px;
     position: relative;
@@ -95,7 +95,7 @@
 }
 
 .message.sent {
-    background-color: #ff9f47;
+    background-color: #ff7b00;
     color: white;
     text-align: right;
 }
