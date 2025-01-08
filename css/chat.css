@@ -1,0 +1,159 @@
+/* General Styles */
+/*body {*/
+/*    font-family: 'Arial', sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    background: linear-gradient(135deg, #fdfcfb, #e2e2e2);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*    overflow: hidden; !* Prevent scrolling *!*/
+/*}*/
+
+/* Chat Popup Styles */
+.chat-popup {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0, 0, 0, 0.5);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*backdrop-filter: blur(5px);*/
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.chat-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.chat-container {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.8);
+    transition: transform 0.4s ease;
+}
+
+.chat-popup.show .chat-container {
+    transform: scale(1);
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #ff7f11, #ff9f47);
+    color: #fff;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+    transform: rotate(90deg);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.message.received {
+    background-color: #ececec;
+    text-align: left;
+}
+
+.message.sent {
+    background-color: #ff9f47;
+    color: white;
+    text-align: right;
+}
+
+/* Input Section */
+.chat-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+#send-button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #ff7f11, #ff9f47);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background: #ff7a00;
+}
+
+/* Trigger Button */
+.chat-trigger {
+    top: 620px;
+    display: flex;
+    position: absolute;
+    z-index: 900;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff7f11, #ff9f47);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /*transition: background 0.3s;*/
+}
+
+.chat-trigger:hover {
+    background: #ff7a00;
+}
+#chat-popup {
+    position: absolute; /* or fixed if you want it to stay in place even when scrolling */
+    top: 50px;
+    left: 50px;
+    transition: transform 0.1s ease; /* Optionally add a transition for smooth effect */
+    cursor: default; /* Set cursor to move by default */
+}

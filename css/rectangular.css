@@ -6,3 +6,10 @@
     align-items: center;
     justify-content: center;
 }
+.hidden-rect{
+    padding-right: 410px;
+    background-color: transparent;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
