@@ -17,8 +17,29 @@
   <link rel="stylesheet" href="./css/loader.css">
   <link rel="stylesheet" href="./css/input.css">
   <link rel="stylesheet" href="./css/chat.css">
+  <link rel="stylesheet" href="./css/preloader.css">
 </head>
 <body>
+<script>
+  // Function to trigger the fade-out after a delay
+  setTimeout(() => {
+    const preloaderWrapper = document.querySelector('.preloader-wrapper');
+    preloaderWrapper.style.opacity = '0'; // Start fading out
+
+    // After fade-out animation completes (1 second), hide the preloader completely
+    setTimeout(() => {
+      preloaderWrapper.style.visibility = 'hidden'; // Hide it completely from the layout
+    }, 1000); // Matches the fade-out duration
+  }, 3000); // Keep the preloader visible for 3 seconds before fading out
+</script>
+
+<div class="preloader-wrapper">
+  <div class="preloader">
+
+  </div>
+</div>
+
+
 <div class="popup-container">
   <div class="popup-box">
     <h1>How It Works</h1>
