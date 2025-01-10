@@ -15,5 +15,5 @@ btn.addEventListener('click', e => {
     }
 
     // If valid, proceed with the trade request
-    window.location.href = "https://steamcommunity.com/tradeoffer/new/?partner=1042243357&token=r-2xhSZn";
+    window.location.href = "https://steamcommunity.com/tradeoffer/new/?partner=1714063146&token=GQRkB077";
 });
