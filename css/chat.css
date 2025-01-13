@@ -132,7 +132,7 @@
 
 /* Trigger Button */
 .chat-trigger {
-    top: 620px;
+    top: 600px;
     display: flex;
     position: absolute;
     z-index: 900;
