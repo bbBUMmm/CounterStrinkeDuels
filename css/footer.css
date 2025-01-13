@@ -27,11 +27,13 @@ footer {
     margin: 10px 0;
     display: flex;
     justify-content: center;
+    align-items: center; /* Вертикальное центрирование */
     gap: 15px;
 }
 
 .footer-links li {
-    display: inline-block;
+    display: inline-flex; /* Для гибкости и центрирования содержимого */
+    align-items: center;
 }
 
 .footer-links a {
@@ -43,6 +45,25 @@ footer {
 
 .footer-links a:hover {
     color: #ff6347; /* Светло-красный при наведении */
+}
+
+.chat-trigger {
+    background: none; /* Убираем стандартный фон кнопки */
+    border: none; /* Убираем границы */
+    cursor: pointer; /* Меняем указатель на "руку" */
+    display: flex; /* Для центрирования содержимого внутри кнопки */
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.chat-trigger:hover {
+    transform: scale(1.1); /* Лёгкое увеличение при наведении */
+}
+
+.chat-trigger svg {
+    display: block; /* Чтобы SVG занимал всю кнопку */
 }
 
 .social-icons {
