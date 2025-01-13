@@ -10,3 +10,12 @@
     background: white;
     opacity: 0.91;
 }
+.main-container-contact{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 850px;
+    height: 100%;
+    background: white;
+    opacity: 0.91;
+}
