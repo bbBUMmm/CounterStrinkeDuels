@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatMessages = document.querySelector(".chat-messages");
 
     let flagged = false;
+    let isDragging = false;
 
     // Load saved messages from localStorage
     loadMessages();
@@ -21,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
         chatPopup.classList.remove("show");
     });
 
-    // Close Popup by Clicking Outside of Chat Container
-    chatPopup.addEventListener("click", (e) => {
-        if (e.target === chatPopup) {
+    // Close Popup by Clicking Outside of Chat Container (only when not dragging)
+    document.addEventListener('mousedown', (e) => {
+        if (e.target === chatPopup && !isDragging) {
             chatPopup.classList.remove("show");
         }
     });
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Add the dragging functionality with smoother performance
-    let offsetX = 0, offsetY = 0, isDragging = false;
+    let offsetX = 0, offsetY = 0;
 
     // Detect mouse down event to start dragging
     chatPopup.querySelector('.chat-header').addEventListener('mousedown', (e) => {
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Detect mouse up event to stop dragging, but without closing the popup
+    // Detect mouse up event to stop dragging
     document.addEventListener('mouseup', () => {
         isDragging = false;
         document.body.style.cursor = 'default'; // Reset cursor after dragging
